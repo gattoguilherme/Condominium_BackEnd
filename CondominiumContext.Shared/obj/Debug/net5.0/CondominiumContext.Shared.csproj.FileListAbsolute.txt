@@ -1,0 +1,12 @@
+D:\devel\Condominium\CondominiumContext.Shared\bin\Debug\net5.0\CondominiumContext.Shared.deps.json
+D:\devel\Condominium\CondominiumContext.Shared\bin\Debug\net5.0\CondominiumContext.Shared.dll
+D:\devel\Condominium\CondominiumContext.Shared\bin\Debug\net5.0\ref\CondominiumContext.Shared.dll
+D:\devel\Condominium\CondominiumContext.Shared\bin\Debug\net5.0\CondominiumContext.Shared.pdb
+D:\devel\Condominium\CondominiumContext.Shared\obj\Debug\net5.0\CondominiumContext.Shared.csproj.AssemblyReference.cache
+D:\devel\Condominium\CondominiumContext.Shared\obj\Debug\net5.0\CondominiumContext.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\devel\Condominium\CondominiumContext.Shared\obj\Debug\net5.0\CondominiumContext.Shared.AssemblyInfoInputs.cache
+D:\devel\Condominium\CondominiumContext.Shared\obj\Debug\net5.0\CondominiumContext.Shared.AssemblyInfo.cs
+D:\devel\Condominium\CondominiumContext.Shared\obj\Debug\net5.0\CondominiumContext.Shared.csproj.CoreCompileInputs.cache
+D:\devel\Condominium\CondominiumContext.Shared\obj\Debug\net5.0\CondominiumContext.Shared.dll
+D:\devel\Condominium\CondominiumContext.Shared\obj\Debug\net5.0\ref\CondominiumContext.Shared.dll
+D:\devel\Condominium\CondominiumContext.Shared\obj\Debug\net5.0\CondominiumContext.Shared.pdb

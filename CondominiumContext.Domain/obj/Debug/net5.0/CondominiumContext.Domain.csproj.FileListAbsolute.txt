@@ -1,0 +1,15 @@
+D:\devel\Condominium\CondominiumContext.Domain\obj\Debug\net5.0\CondominiumContext.Domain.csproj.AssemblyReference.cache
+D:\devel\Condominium\CondominiumContext.Domain\obj\Debug\net5.0\CondominiumContext.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\devel\Condominium\CondominiumContext.Domain\obj\Debug\net5.0\CondominiumContext.Domain.AssemblyInfoInputs.cache
+D:\devel\Condominium\CondominiumContext.Domain\obj\Debug\net5.0\CondominiumContext.Domain.AssemblyInfo.cs
+D:\devel\Condominium\CondominiumContext.Domain\obj\Debug\net5.0\CondominiumContext.Domain.csproj.CoreCompileInputs.cache
+D:\devel\Condominium\CondominiumContext.Domain\bin\Debug\net5.0\CondominiumContext.Domain.deps.json
+D:\devel\Condominium\CondominiumContext.Domain\bin\Debug\net5.0\CondominiumContext.Domain.dll
+D:\devel\Condominium\CondominiumContext.Domain\bin\Debug\net5.0\ref\CondominiumContext.Domain.dll
+D:\devel\Condominium\CondominiumContext.Domain\bin\Debug\net5.0\CondominiumContext.Domain.pdb
+D:\devel\Condominium\CondominiumContext.Domain\bin\Debug\net5.0\CondominiumContext.Shared.dll
+D:\devel\Condominium\CondominiumContext.Domain\bin\Debug\net5.0\CondominiumContext.Shared.pdb
+D:\devel\Condominium\CondominiumContext.Domain\obj\Debug\net5.0\CondominiumContext.Domain.csproj.CopyComplete
+D:\devel\Condominium\CondominiumContext.Domain\obj\Debug\net5.0\CondominiumContext.Domain.dll
+D:\devel\Condominium\CondominiumContext.Domain\obj\Debug\net5.0\ref\CondominiumContext.Domain.dll
+D:\devel\Condominium\CondominiumContext.Domain\obj\Debug\net5.0\CondominiumContext.Domain.pdb
