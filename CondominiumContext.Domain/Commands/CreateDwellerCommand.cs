@@ -9,7 +9,7 @@ using CondominiumContext.Shared.Commands;
 
 namespace CondominiumContext.Domain.Commands
 {
-    public class CreateDwallerCommand : ICommand
+    public class CreateDwellerCommand : ICommand
     {
         public string BuildName { get; set; }
         public string BuildNumber { get; set; }
@@ -22,7 +22,6 @@ namespace CondominiumContext.Domain.Commands
         public string MailAddress { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        //public IList<Contact> Contacts;
         public IList<Contact> Contacts { get; set; }
     }
 }

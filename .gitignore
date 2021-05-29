@@ -1,0 +1,7 @@
+Condominium.WebApi/bin/
+Condominium.WebApi/obj/
+CondominiumContext.Domain/bin/
+CondominiumContext.Domain/obj/
+CondominiumContext.Shared/bin/
+CondominiumContext.Shared/obj/
+.vs/

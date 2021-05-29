@@ -7,8 +7,11 @@ using CondominiumContext.Domain.Entities;
 
 namespace CondominiumContext.Domain.Repositories
 {
-    public interface IDwallerRepository
+    public interface IDwellerRepository
     {
-        void CreateDwaller(Dweller dwaller);
+        bool CreateDweller(Dweller dweller);
+        Dweller GetDwellerByID(int dwellerId);
+        IList<Dweller> GetDwellers();
+        bool DeleteDwellerById(int dwellerId);
     }
 }
