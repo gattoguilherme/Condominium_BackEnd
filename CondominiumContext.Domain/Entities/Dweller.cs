@@ -12,6 +12,11 @@ namespace CondominiumContext.Domain.Entities
     {
         private IList<Contact> _contacts;
 
+        public Dweller()
+        {
+
+        }
+
         public Dweller(Address address, Date bornDate, Document document, Email email, Name name)
         {
             Address = address;

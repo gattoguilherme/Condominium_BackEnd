@@ -14,16 +14,16 @@ using Newtonsoft.Json;
 
 namespace CondominiumContext.Domain.Handlers
 {
-    public class DwellerHandler : IHandler<CreateDwallerCommand>
+    public class DwellerHandler : IHandler<CreateDwellerCommand>, IHandler<GetDwellerByIdCommand>
     {
-        private readonly IDwallerRepository _repository;
+        private readonly IDwellerRepository _repository;
 
-        public DwellerHandler(IDwallerRepository repository)
+        public DwellerHandler(IDwellerRepository repository)
         {
             this._repository = repository;
         }
 
-        public ICommandResult Handle(CreateDwallerCommand command)
+        public ICommandResult Handle(CreateDwellerCommand command)
         {
             // Generating VOs
             var address = new Address(command.BuildName, command.BuildNumber, command.Floor);
@@ -33,16 +33,37 @@ namespace CondominiumContext.Domain.Handlers
             var name = new Name(command.FirstName, command.LastName);
 
             // Generating Entity
-            var dwaller = new Dweller(address, date, document, email, name);
+            var dweller = new Dweller(address, date, document, email, name);
 
             // Adding contacts to entity
             if (command.Contacts != null)
-                command.Contacts.ToList().ForEach(x => { dwaller.AddContact(x); } );
+                command.Contacts.ToList().ForEach(x => { dweller.AddContact(x); } );
 
-            // Call recording dwaller service
-            _repository.CreateDwaller(dwaller);
+            // Call recording dweller service
+            _repository.CreateDweller(dweller);
 
-            return new CommandResult(true, "Dwaller successfully created.");
+            return new CommandResult(true, "Dweller successfully created.");
+        }
+
+        public ICommandResult Handle(GetDwellerByIdCommand command)
+        {
+            var dweller = _repository.GetDwellerByID(command.DwellerID);
+
+            return new CommandResult(true, dweller.ToString());
+        }
+
+        public ICommandResult Handle(GetDwellersCommand command)
+        {
+            var dwellers = _repository.GetDwellers();
+
+            return new CommandResult(true, JsonConvert.SerializeObject(dwellers));
+        }
+
+        public ICommandResult Handler(DeleteDwellerByIdCommand command)
+        {
+            _repository.DeleteDwellerById(command.DwellerID);
+
+            return new CommandResult(true, string.Format("{0} successfully deleted.", command.DwellerID));
         }
     }
 }
