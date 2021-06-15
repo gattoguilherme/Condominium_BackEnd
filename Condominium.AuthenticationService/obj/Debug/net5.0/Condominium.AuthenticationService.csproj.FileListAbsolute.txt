@@ -1,0 +1,15 @@
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\bin\Debug\net5.0\Condominium.AuthenticationService.deps.json
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\bin\Debug\net5.0\Condominium.AuthenticationService.dll
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\bin\Debug\net5.0\ref\Condominium.AuthenticationService.dll
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\bin\Debug\net5.0\Condominium.AuthenticationService.pdb
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\bin\Debug\net5.0\CondominiumContext.Shared.dll
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\bin\Debug\net5.0\CondominiumContext.Shared.pdb
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\obj\Debug\net5.0\Condominium.AuthenticationService.csproj.AssemblyReference.cache
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\obj\Debug\net5.0\Condominium.AuthenticationService.GeneratedMSBuildEditorConfig.editorconfig
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\obj\Debug\net5.0\Condominium.AuthenticationService.AssemblyInfoInputs.cache
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\obj\Debug\net5.0\Condominium.AuthenticationService.AssemblyInfo.cs
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\obj\Debug\net5.0\Condominium.AuthenticationService.csproj.CoreCompileInputs.cache
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\obj\Debug\net5.0\Condominium.AuthenticationService.csproj.CopyComplete
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\obj\Debug\net5.0\Condominium.AuthenticationService.dll
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\obj\Debug\net5.0\ref\Condominium.AuthenticationService.dll
+D:\devel\Condominium_BackEnd\Condominium.AuthenticationService\obj\Debug\net5.0\Condominium.AuthenticationService.pdb

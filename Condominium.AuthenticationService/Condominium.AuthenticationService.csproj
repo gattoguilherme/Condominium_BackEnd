@@ -5,11 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.11.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.11.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Condominium.AuthenticationService\Condominium.AuthenticationService.csproj" />
     <ProjectReference Include="..\CondominiumContext.Shared\CondominiumContext.Shared.csproj" />
   </ItemGroup>
 

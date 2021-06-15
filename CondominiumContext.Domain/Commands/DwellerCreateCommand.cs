@@ -9,7 +9,7 @@ using CondominiumContext.Shared.Commands;
 
 namespace CondominiumContext.Domain.Commands
 {
-    public class CreateDwellerCommand : ICommand
+    public class DwellerCreateCommand : ICommand
     {
         public string BuildName { get; set; }
         public string BuildNumber { get; set; }
