@@ -1,4 +1,7 @@
 appsettings.json
+appsettings.Development.json
+Condominium.WebApi/appsettings.json
+Condominium.WebApi/appsettings.Development.json
 Condominium.WebApi/bin/
 Condominium.WebApi/obj/
 CondominiumContext.Domain/bin/
