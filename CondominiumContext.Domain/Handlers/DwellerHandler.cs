@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace CondominiumContext.Domain.Handlers
 {
-    public class DwellerHandler : IHandler<CreateDwellerCommand>, IHandler<GetDwellerByIdCommand>
+    public class DwellerHandler : IHandler<DwellerCreateCommand>, IHandler<DwellerGetByIdCommand>
     {
         private readonly IDwellerRepository _repository;
 
@@ -23,7 +23,7 @@ namespace CondominiumContext.Domain.Handlers
             this._repository = repository;
         }
 
-        public ICommandResult Handle(CreateDwellerCommand command)
+        public ICommandResult Handle(DwellerCreateCommand command)
         {
             // Generating VOs
             var address = new Address(command.BuildName, command.BuildNumber, command.Floor);
@@ -45,21 +45,21 @@ namespace CondominiumContext.Domain.Handlers
             return new CommandResult(true, "Dweller successfully created.");
         }
 
-        public ICommandResult Handle(GetDwellerByIdCommand command)
+        public ICommandResult Handle(DwellerGetByIdCommand command)
         {
             var dweller = _repository.GetDwellerByID(command.DwellerID);
 
             return new CommandResult(true, dweller.ToString());
         }
 
-        public ICommandResult Handle(GetDwellersCommand command)
+        public ICommandResult Handle(DwellersGetCommand command)
         {
             var dwellers = _repository.GetDwellers();
 
             return new CommandResult(true, JsonConvert.SerializeObject(dwellers));
         }
 
-        public ICommandResult Handler(DeleteDwellerByIdCommand command)
+        public ICommandResult Handler(DwellerDeleteByIdCommand command)
         {
             _repository.DeleteDwellerById(command.DwellerID);
 

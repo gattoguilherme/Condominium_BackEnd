@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace CondominiumContext.Domain.Commands
 {
-    public class DeleteDwellerByIdCommand : ICommand
+    public class DwellerGetByIdCommand : ICommand
     {
-        public DeleteDwellerByIdCommand(int dwellerID)
+        public DwellerGetByIdCommand(int dwellerID)
         {
             DwellerID = dwellerID;
         }

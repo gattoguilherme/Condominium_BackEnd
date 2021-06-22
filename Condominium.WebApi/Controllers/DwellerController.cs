@@ -9,15 +9,17 @@ using CondominiumContext.Domain.Entities;
 using CondominiumContext.Domain.Handlers;
 using CondominiumContext.Domain.Repositories;
 using CondominiumContext.Shared.Commands;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Condominium.WebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class DwellerController : ControllerBase
     {
+        [Route("create")]
         [HttpPost]
-        public ICommandResult Create(CreateDwellerCommand command)
+        public ICommandResult Create([FromBody] DwellerCreateCommand command)
         {
             var mockRepo = new MockRepository();
             var handler = new DwellerHandler(mockRepo);
@@ -26,13 +28,15 @@ namespace Condominium.WebApi.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "role2")]
+        [Route("getById")]
         public ICommandResult GetById()
         {
             var dwellerId = Convert.ToInt32(Request.Headers["id"]);
             var mockRepo = new MockRepository();
             var handler = new DwellerHandler(mockRepo);
 
-            return handler.Handle(new GetDwellerByIdCommand(dwellerId));
+            return handler.Handle(new DwellerGetByIdCommand(dwellerId));
         }
 
         public class MockRepository : IDwellerRepository

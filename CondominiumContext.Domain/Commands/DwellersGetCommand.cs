@@ -7,13 +7,8 @@ using System.Threading.Tasks;
 
 namespace CondominiumContext.Domain.Commands
 {
-    public class GetDwellerByIdCommand : ICommand
+    public class DwellersGetCommand : ICommand
     {
-        public GetDwellerByIdCommand(int dwellerID)
-        {
-            DwellerID = dwellerID;
-        }
 
-        public int DwellerID { get; set; }
     }
 }
