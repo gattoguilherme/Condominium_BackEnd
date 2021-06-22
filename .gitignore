@@ -2,10 +2,12 @@ appsettings.json
 appsettings.Development.json
 Condominium.WebApi/appsettings.json
 Condominium.WebApi/appsettings.Development.json
-Condominium.WebApi/bin/
-Condominium.WebApi/obj/
+Condominium.AuthenticationService/bin/
+Condominium.AuthenticationService/obj/
 CondominiumContext.Domain/bin/
 CondominiumContext.Domain/obj/
 CondominiumContext.Shared/bin/
 CondominiumContext.Shared/obj/
+Condominium.WebApi/bin/
+Condominium.WebApi/obj/
 .vs/
