@@ -47,7 +47,15 @@ namespace Condominium.WebApi
                 Key = Configuration["Jwt:Key"],
                 Issuer = Configuration["Jwt:Issuer"]
             };
+
+            ConnectionStrings connString = new ConnectionStrings
+            {
+                DefaultConnection = Configuration["ConnectionStrings:DefaultConnection"]
+            };
+
+
             settings.Jwt = jwt;
+            settings.ConnectionStrings = connString;
             services.AddSingleton(settings);
 
             services.AddAuthentication(x =>

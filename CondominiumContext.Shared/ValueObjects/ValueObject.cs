@@ -8,6 +8,11 @@ namespace CondominiumContext.Shared.ValueObjects
 {
     public class ValueObject
     {
+        protected ValueObject()
+        {
+            Id = Guid.NewGuid();
+        }
 
+        public Guid Id { get; set; }
     }
 }

@@ -8,6 +8,9 @@ CondominiumContext.Domain/bin/
 CondominiumContext.Domain/obj/
 CondominiumContext.Shared/bin/
 CondominiumContext.Shared/obj/
+CondominiumContext.Infrastructure/bin/
+CondominiumContext.Infrastructure/obj/
+CondominiumContext.Infrastructure/Migrations/
 Condominium.WebApi/bin/
 Condominium.WebApi/obj/
 .vs/
