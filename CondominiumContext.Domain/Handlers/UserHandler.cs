@@ -1,6 +1,7 @@
 ﻿using Condominium.AuthenticationService;
 using CondominiumContext.Domain.Commands;
 using CondominiumContext.Domain.Entities;
+using CondominiumContext.Domain.Enums;
 using CondominiumContext.Domain.Repositories;
 using CondominiumContext.Shared.Commands;
 using CondominiumContext.Shared.Entities;
@@ -33,7 +34,7 @@ namespace CondominiumContext.Domain.Handlers
 
             string token = user != null ? TokenService.BuildToken(user) : string.Empty;
 
-            return new CommandResult(true, token);
+            return new CommandResult(EResultType.SUCCESS, token);
         }
     }
 }

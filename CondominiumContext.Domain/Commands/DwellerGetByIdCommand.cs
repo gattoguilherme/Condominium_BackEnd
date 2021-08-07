@@ -9,11 +9,11 @@ namespace CondominiumContext.Domain.Commands
 {
     public class DwellerGetByIdCommand : ICommand
     {
-        public DwellerGetByIdCommand(int dwellerID)
+        public DwellerGetByIdCommand(Guid dwellerID)
         {
             DwellerID = dwellerID;
         }
 
-        public int DwellerID { get; set; }
+        public Guid DwellerID { get; set; }
     }
 }

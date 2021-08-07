@@ -9,7 +9,12 @@ namespace CondominiumContext.Domain.ValueObjects
 {
     public class Contact : ValueObject
     {
-        public Contact(string ddd, string number, string countryCode = "55")
+        public Contact()
+        {
+
+        }
+
+        public Contact(string ddd, string number, string countryCode = "55", Guid? id = null) : base(id)
         {
             Ddd = ddd;
             Number = number;

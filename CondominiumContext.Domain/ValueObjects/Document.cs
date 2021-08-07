@@ -10,7 +10,12 @@ namespace CondominiumContext.Domain.ValueObjects
 {
     public class Document : ValueObject
     {
-        public Document(string number, EDocumentType type)
+        public Document()
+        {
+
+        }
+
+        public Document(string number, EDocumentType type, Guid? id = null) : base(id)
         {
             Number = number;
             Type = type;

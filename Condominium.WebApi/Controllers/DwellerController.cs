@@ -10,6 +10,8 @@ using CondominiumContext.Domain.Handlers;
 using CondominiumContext.Domain.Repositories;
 using CondominiumContext.Shared.Commands;
 using Microsoft.AspNetCore.Authorization;
+using CondominiumContext.Infrastructure.DbConfiguration;
+using CondominiumContext.Infrastructure.Repositories;
 
 namespace Condominium.WebApi.Controllers
 {
@@ -17,24 +19,31 @@ namespace Condominium.WebApi.Controllers
     [ApiController]
     public class DwellerController : ControllerBase
     {
+        private readonly ApplicationContext _context;
+        public DwellerController(ApplicationContext context)
+        {
+            this._context = context;
+        }
+
         [Route("create")]
         [HttpPost]
         public ICommandResult Create([FromBody] DwellerCreateCommand command)
         {
-            var mockRepo = new MockRepository();
-            var handler = new DwellerHandler(mockRepo);
+            var repository = new DwellerRepository(_context);
+
+            var handler = new DwellerHandler(repository);
 
             return handler.Handle(command);
         }
 
         [HttpGet]
-        [Authorize(Roles = "role2")]
+        //[Authorize(Roles = "role2")]
         [Route("getById")]
         public ICommandResult GetById()
         {
-            var dwellerId = Convert.ToInt32(Request.Headers["id"]);
-            var mockRepo = new MockRepository();
-            var handler = new DwellerHandler(mockRepo);
+            var dwellerId = Guid.Parse(Request.Headers["id"].ToString());
+            var repository = new DwellerRepository(_context);
+            var handler = new DwellerHandler(repository);
 
             return handler.Handle(new DwellerGetByIdCommand(dwellerId));
         }
@@ -46,7 +55,7 @@ namespace Condominium.WebApi.Controllers
                 return true;
             }
 
-            public Dweller GetDwellerByID(int dwellerId)
+            public Dweller GetDwellerByID(Guid dwellerId)
             {
                 return new Dweller();
             }

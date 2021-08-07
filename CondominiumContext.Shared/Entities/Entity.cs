@@ -8,9 +8,12 @@ namespace CondominiumContext.Shared.Entities
 {
     public class Entity
     {
-        protected Entity()
+        protected Entity(Guid? _id = null)
         {
-            Id = Guid.NewGuid();
+            if (_id != null)
+                this.Id = (Guid)_id;
+            else
+                this.Id = Guid.NewGuid();
         }
 
         public Guid Id { get; set; }

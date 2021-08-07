@@ -17,7 +17,7 @@ namespace CondominiumContext.Domain.Entities
 
         }
 
-        public Dweller(Address address, Date bornDate, Document document, Email email, Name name)
+        public Dweller(Address address, Date bornDate, Document document, Email email, Name name, Guid? id = null) : base(id)
         {
             Address = address;
             BornDate = bornDate;
@@ -26,8 +26,6 @@ namespace CondominiumContext.Domain.Entities
             Name = name;
             _contacts = new List<Contact>(); 
         }
-
-        public Guid Id { get; set; }
         public Address Address { get; private set; }
         public Date BornDate { get; private set; }
         public Document Document { get; private set; }

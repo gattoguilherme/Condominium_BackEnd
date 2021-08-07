@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Condominium.WebApi\Condominium.WebApi.csproj" />
     <ProjectReference Include="..\CondominiumContext.Domain\CondominiumContext.Domain.csproj" />
     <ProjectReference Include="..\CondominiumContext.Shared\CondominiumContext.Shared.csproj" />
   </ItemGroup>

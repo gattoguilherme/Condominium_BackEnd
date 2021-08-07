@@ -9,7 +9,12 @@ namespace CondominiumContext.Domain.ValueObjects
 {
     public class Date : ValueObject
     {
-        public Date(string day, string month, string year)
+        public Date()
+        {
+
+        }
+
+        public Date(string day, string month, string year, Guid? id = null) : base(id)
         {
             Day = day;
             Month = month;

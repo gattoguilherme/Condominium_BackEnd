@@ -10,7 +10,7 @@ namespace CondominiumContext.Domain.Repositories
     public interface IDwellerRepository
     {
         bool CreateDweller(Dweller dweller);
-        Dweller GetDwellerByID(int dwellerId);
+        Dweller GetDwellerByID(Guid dwellerId);
         IList<Dweller> GetDwellers();
         bool DeleteDwellerById(int dwellerId);
     }

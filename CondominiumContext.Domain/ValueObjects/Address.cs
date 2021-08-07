@@ -9,7 +9,12 @@ namespace CondominiumContext.Domain.ValueObjects
 {
     public class Address : ValueObject
     {
-        public Address(string buildName, string number, string floor)
+        public Address()
+        {
+
+        }
+
+        public Address(string buildName, string number, string floor, Guid? id = null) : base(id)
         {
             BuildName = buildName;
             Number = number;

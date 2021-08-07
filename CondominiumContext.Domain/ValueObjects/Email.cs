@@ -9,7 +9,12 @@ namespace CondominiumContext.Domain.ValueObjects
 {
     public class Email : ValueObject
     {
-        public Email(string address)
+        public Email()
+        {
+
+        }
+
+        public Email(string address, Guid? id = null) : base(id)
         {
             Address = address;
         }

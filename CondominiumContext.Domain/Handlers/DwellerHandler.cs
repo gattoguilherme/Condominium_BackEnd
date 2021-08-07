@@ -11,6 +11,7 @@ using CondominiumContext.Domain.Commands;
 using CondominiumContext.Shared.Commands;
 using CondominiumContext.Shared.Handlers;
 using Newtonsoft.Json;
+using CondominiumContext.Domain.Enums;
 
 namespace CondominiumContext.Domain.Handlers
 {
@@ -39,31 +40,33 @@ namespace CondominiumContext.Domain.Handlers
             if (command.Contacts != null)
                 command.Contacts.ToList().ForEach(x => { dweller.AddContact(x); } );
 
+            dweller.AddContact(new Contact("11", "986939908"));
+
             // Call recording dweller service
             _repository.CreateDweller(dweller);
 
-            return new CommandResult(true, "Dweller successfully created.");
+            return new CommandResult(EResultType.SUCCESS, "Dweller successfully created.");
         }
 
         public ICommandResult Handle(DwellerGetByIdCommand command)
         {
             var dweller = _repository.GetDwellerByID(command.DwellerID);
 
-            return new CommandResult(true, dweller.ToString());
+            return new CommandResult(dweller != null ? EResultType.SUCCESS : EResultType.NOT_FOUND, dweller);
         }
 
         public ICommandResult Handle(DwellersGetCommand command)
         {
             var dwellers = _repository.GetDwellers();
 
-            return new CommandResult(true, JsonConvert.SerializeObject(dwellers));
+            return new CommandResult(EResultType.SUCCESS, JsonConvert.SerializeObject(dwellers));
         }
 
         public ICommandResult Handler(DwellerDeleteByIdCommand command)
         {
             _repository.DeleteDwellerById(command.DwellerID);
 
-            return new CommandResult(true, string.Format("{0} successfully deleted.", command.DwellerID));
+            return new CommandResult(EResultType.SUCCESS, string.Format("{0} successfully deleted.", command.DwellerID));
         }
     }
 }

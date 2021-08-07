@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CondominiumContext.Domain.Enums;
 using CondominiumContext.Shared.Commands;
 
 namespace CondominiumContext.Domain.Commands
 {
     public class CommandResult : ICommandResult
     {
-        public CommandResult(bool success, string message)
+        public CommandResult(EResultType result, object message)
         {
-            Success = success;
+            Result = result.ToString();
             Message = message;
         }
 
-        public bool Success { get; set; }
-        public string Message { get; set; }
+        public string Result { get; set; }
+        public object Message { get; set; }
     }
 }
